@@ -271,3 +271,14 @@ int main(){
 }
 
 17.
+#include <stdio.h>
+
+int main(){
+
+    float pi = 3.14159, raio = 0, diametro = 0, circunferencia = 0, area = 0;
+
+    printf("Entre com o valor do Raio:\n");
+    scanf("%f",&raio);
+    printf("Diametro:%.4f\nCircunferência:%.4f\nÁrea:%4.f\n",2.0*raio,(2.0*pi)*raio,pi*(raio*raio));
+    
+}
