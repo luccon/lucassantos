@@ -120,7 +120,28 @@ int main(){
     printf("Antecessor:%d\nSucessor:%d\n",x-1,x+1);
 }
 
-9.#include <stdio.h>
+9.
+#include <stdio.h>
+
+int main(){
+
+    int volume = 0, altura = 0, largura =0, comprimento = 0;
+
+    printf("Entre com o comprimento:\n");
+    scanf("%d",&comprimento);
+    printf("Entre com a largura:\n");
+    scanf("%d",&largura);
+    printf("Entre com a altura:\n");
+    scanf("%d",&altura);
+
+    volume = comprimento*largura*altura;
+
+    printf("O valor do volume da caixa é:%d\n",volume);
+    
+}
+
+10.
+#include <stdio.h>
 
 float real = 0, dolar = 0, cotacao = 0; 
 
@@ -133,3 +154,120 @@ int main(){
     printf("O valor em dolar é:%.2f\n",real*cotacao); 
 }  
 
+11.
+#include <stdio.h>
+
+int main(){
+
+    int num1 = 0, num2 = 0;
+    int soma = 0, produto = 0, diferenca = 0 ,quociente = 0, resto =0; 
+
+    printf("Entre com o primeiro número:\n");
+    scanf("%d",&num1);
+    printf("Entre com o segundo número:\n");
+    scanf("%d",&num2);
+
+    soma = num1 + num2;
+    produto = num1 * num2;
+    diferenca = num1 - num2;
+    quociente = num1 / num2;
+    resto = num1 % num2;
+
+    printf("Os resultados são:\n-Soma = %d\n-Produto = %d\n-Diferença = %d\n-Quociente = %d\n-Resto = %d\n",soma,produto,diferenca,quociente,resto);
+}
+
+12.
+#include <stdio.h>
+
+int main(){
+
+    int a = 0, b = 0;
+
+    printf("Entre com o valor de A:\n");
+    scanf("%d",&a);
+    printf("Entre com o valor de B:\n");
+    scanf("%d",&b);
+
+    a ^= b;
+    b ^= a;
+    a ^= b;
+
+    printf("O valor de A é:%d\nO valor de B é:%d\n",a,b);
+}
+
+13.
+#include <stdio.h>
+
+int main(){
+
+    float c = 0, f = 0;
+
+    printf("Entre com a temperatura em graus celcius:\n");
+    scanf("%f",&c);
+
+    f = (9 * c + 160) / 5;
+
+    printf("A temperatura em Fahrenheit é:%.1f\n",f);
+}
+
+14.
+#include <stdio.h>
+
+int main(){
+
+   int dias_trabalhados = 0;
+   float salario = 0, diaria = 50.25;
+
+   printf("Entre com a quantidade de dias trabalhados:\n");
+   scanf("%d",&dias_trabalhados);
+
+   salario = (float)dias_trabalhados * diaria;
+
+   if(dias_trabalhados >= 10 && dias_trabalhados <= 20){
+       salario = salario * 1.2;
+   } 
+   if(dias_trabalhados > 20){
+       salario = salario * 1.3;
+   }
+
+   salario = salario * 0.9;
+
+   printf("O salario total é:%.2f\n",salario);
+}
+
+15.
+#include <stdio.h>
+
+int main(){
+
+    float valor_hora = 0, horas_trab = 0, inss = 0, salario_br = 0, salario_liq = 0;
+
+    printf("Entre com o valor da hora trabalhada:\n");
+    scanf("%f",&valor_hora);
+    printf("Entre com o número de horas trabalhadas:\n");
+    scanf("%f",&horas_trab);
+    printf("Entre com o valor do desconto do INSS em %%:\n");
+    scanf("%f",&inss);
+
+    salario_br = valor_hora * horas_trab;
+    salario_liq = salario_br - (inss*0.01 * salario_br);
+
+    printf("Valor do salário bruto:%.2f\nValor do salário liquido:%.2f\n",salario_br,salario_liq);
+}
+
+16.
+#include <stdio.h>
+
+int main(){
+
+    int numero = 0, valor_abs = 0;
+
+    printf("Entre com o número:\n");
+    scanf("%d",&numero);
+
+    valor_abs = (numero < 0) * -numero + (numero >= 0) * numero;
+
+    printf("Valor absoluto:%d\n",valor_abs);    
+}
+
+17.
