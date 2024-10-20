@@ -282,3 +282,150 @@ int main(){
     printf("Diametro:%.4f\nCircunferência:%.4f\nÁrea:%4.f\n",2.0*raio,(2.0*pi)*raio,pi*(raio*raio));
     
 }
+
+18.
+#include <stdio.h>
+
+int main(){
+   printf("\n********       ***         *              *");
+   printf("\n*      *     *     *      ***           *   *");
+   printf("\n*      *   *         *   *****        *       *");
+   printf("\n*      *   *         *     *        *           *");
+   printf("\n*      *   *         *     *      *               *");
+   printf("\n*      *   *         *     *        *            *");
+   printf("\n*      *   *         *     *          *        *");
+   printf("\n*      *    *       *      *            *    *");
+   printf("\n********       ***         *              *");
+}
+
+19.
+#include <stdio.h>
+
+int main(){
+   
+    int numero = 0;
+    char* resultado;
+
+    printf("Entre com o núemro:\n");
+    scanf("%d",&numero);
+
+    resultado = (numero % 2 == 0) ? "par" : "ímpar";
+
+    printf("O número %d é %s\n",numero,resultado);
+}
+
+20.
+#include <stdio.h>
+
+int main(){
+   
+    int num1 = 0, num2 = 0;
+    char* resultado;
+
+    printf("Entre com o primeiro número:\n");
+    scanf("%d",&num1);
+    printf("Entre com o segundo número:\n");
+    scanf("%d",&num2);
+
+    resultado = ((num1 % num2 == 0 && num2 != 0) || num2 % num1 == 0 && num2 !=0 ) ? "Multiplo" : "Não multiplo";
+
+    printf("O número %d é %s de %d\n",num1 ,resultado, num2);
+}
+
+21.
+#include <stdio.h>
+
+int main() {
+    printf("Conjunto:\nA    %d\nB    %d\nC    %d\na    %d\nb    %d\nc    %d\n0    %d\n1    %d\n2    %d\n$    %d\n*    %d\n+    %d\n/    %d\n     %d\n",'A','B','C','a','b','c','0','1','2','$','*','+','/',' ');
+}
+
+22.
+#include <stdio.h>
+
+int main() {
+    int numero = 0, centena = 0, dezena = 0, unidade = 0, inverso = 0;
+
+    printf("Entre com um número de 3 digitos:\n");
+    scanf("%d",&numero);
+
+    centena = numero / 100;
+    dezena = (numero % 100) / 10;
+    unidade = numero % 10;
+
+    inverso = (unidade * 100) + (dezena * 10) + centena;
+
+    printf("O número invertido é igual:%d\n",inverso);
+}
+
+23.
+#include <stdio.h>
+
+int main() {
+    int x, n, resultado;
+
+    printf("Entre com o valor x:\n");
+    scanf("%d",&x);
+    printf("Entre com o valor n:\n");
+    scanf("%d",&n);
+
+    resultado = x << n;
+
+    printf("%d",resultado);
+}
+
+24.
+#include <stdio.h>
+
+int main() {
+    int total_seg = 0, horas = 0, minutos = 0, segundos = 0;
+
+    printf("Entre com a quantidade total de segundos:\n");
+    scanf("%d",&total_seg);
+
+    horas = total_seg / 3600;
+    minutos = (total_seg % 3600) / 60;
+    segundos = total_seg % 60;
+
+    printf("São %d horas, %d minutos, %d segundos.\n",horas,minutos,segundos);
+}
+
+25.
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float x1 = 0, x2 = 0, y1 = 0, y2 = 0, distancia = 0;
+
+    printf("Entre com o valor de X1:\n");
+    scanf("%f",&x1);
+    printf("Entre com o valor de X2:\n");
+    scanf("%f",&x2);
+    printf("Entre com o valor de Y1\n");
+    scanf("%f",&y1);
+    printf("Entre com o valor de Y2:\n");
+    scanf("%f",&y2);
+
+    distancia = sqrt(pow(x2-x1,2)+pow(y2-y1,2));
+
+    printf("A distância entre os pontos é:%.2f",distancia);
+}
+
+26.
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float num1 = 0, num2 = 0, num3 = 0, med_aritmetica = 0, med_geometrica = 0;
+
+    printf("Entre com o primeiro número:\n");
+    scanf("%f",&num1);
+    printf("Entre com o segundo número:\n");
+    scanf("%f",&num2);
+    printf("Entre com o terceiro número:\n");
+    scanf("%f",&num3);
+
+    med_aritmetica = (num1 + num2 + num3) / 3;
+    med_geometrica = pow(num1 * num2 * num3, 1.0 / 3.0);
+
+    printf("Média aritmética:%.2f\nMédia Geométrica:%.2f",med_aritmetica,med_geometrica);
+}
